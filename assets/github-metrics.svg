@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 220" width="100%" height="220">
+  <defs>
+    <linearGradient id="cardBgM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#0B0F19"/>
+      <stop offset="100%" stop-color="#070A12"/>
+    </linearGradient>
+
+    <linearGradient id="borderGradM" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+
+    <filter id="softGlowM" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      .metric-box { transition: all 0.3s ease; }
+      .pulse-icon { animation: iconP 3s ease-in-out infinite; }
+      @keyframes iconP {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.08); filter: drop-shadow(0 0 6px #38BDF8); }
+      }
+    </style>
+  </defs>
+
+  <!-- Background with Glassmorphic Border -->
+  <rect x="2" y="2" width="676" height="216" rx="16" fill="url(#cardBgM)" stroke="url(#borderGradM)" stroke-width="1.5"/>
+
+  <!-- Card Title -->
+  <g transform="translate(30, 36)">
+    <circle cx="8" cy="8" r="14" fill="rgba(56, 189, 248, 0.15)"/>
+    <!-- GitHub Octocat / Terminal icon -->
+    <path d="M 4 5 L 8 8 L 4 11" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+    <line x1="9" y1="12" x2="13" y2="12" stroke="#38BDF8" stroke-width="2"/>
+    <text x="32" y="13" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" letter-spacing="0.5">
+      GITHUB REPOSITORY &amp; ACTIVITY OVERVIEW
+    </text>
+    <text x="560" y="13" fill="#64748B" font-family="monospace" font-size="11" text-anchor="end">
+      @Udaykiran7799-M
+    </text>
+  </g>
+
+  <!-- 4 Stat Metric Cards -->
+  <g transform="translate(30, 68)">
+    <!-- Metric 1: Public Repos -->
+    <g transform="translate(0, 0)">
+      <rect width="140" height="90" rx="12" fill="rgba(30, 41, 59, 0.6)" stroke="rgba(56, 189, 248, 0.25)" stroke-width="1"/>
+      <circle cx="28" cy="30" r="12" fill="rgba(56, 189, 248, 0.15)"/>
+      <text x="28" y="34" fill="#38BDF8" font-size="11" text-anchor="middle">📦</text>
+      <text x="28" y="65" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="800">
+        3
+      </text>
+      <text x="28" y="78" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="600">
+        PUBLIC REPOSITORIES
+      </text>
+    </g>
+
+    <!-- Metric 2: Primary Tech -->
+    <g transform="translate(155, 0)">
+      <rect width="140" height="90" rx="12" fill="rgba(30, 41, 59, 0.6)" stroke="rgba(129, 140, 248, 0.25)" stroke-width="1"/>
+      <circle cx="28" cy="30" r="12" fill="rgba(129, 140, 248, 0.15)"/>
+      <text x="28" y="34" fill="#818CF8" font-size="11" text-anchor="middle">☕</text>
+      <text x="28" y="65" fill="#818CF8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800">
+        Java / JS
+      </text>
+      <text x="28" y="78" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="600">
+        CORE TECH STACK
+      </text>
+    </g>
+
+    <!-- Metric 3: Certifications -->
+    <g transform="translate(310, 0)">
+      <rect width="140" height="90" rx="12" fill="rgba(30, 41, 59, 0.6)" stroke="rgba(192, 132, 252, 0.25)" stroke-width="1"/>
+      <circle cx="28" cy="30" r="12" fill="rgba(192, 132, 252, 0.15)"/>
+      <text x="28" y="34" fill="#C084FC" font-size="11" text-anchor="middle">🏆</text>
+      <text x="28" y="65" fill="#C084FC" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="800">
+        8
+      </text>
+      <text x="28" y="78" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="600">
+        VERIFIED CERTIFICATES
+      </text>
+    </g>
+
+    <!-- Metric 4: Academic Year -->
+    <g transform="translate(465, 0)">
+      <rect width="155" height="90" rx="12" fill="rgba(30, 41, 59, 0.6)" stroke="rgba(52, 211, 153, 0.25)" stroke-width="1"/>
+      <circle cx="28" cy="30" r="12" fill="rgba(52, 211, 153, 0.15)"/>
+      <text x="28" y="34" fill="#34D399" font-size="11" text-anchor="middle">🎓</text>
+      <text x="28" y="65" fill="#34D399" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="800">
+        2024–27
+      </text>
+      <text x="28" y="78" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="600">
+        BCA DATA ANALYTICS
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Ribbon -->
+  <g transform="translate(30, 185)">
+    <text x="0" y="10" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="500">
+      ⚡ Verified Public Repositories: <tspan fill="#38BDF8">Gift-Management-System</tspan> • <tspan fill="#818CF8">user-feedback-app</tspan> • <tspan fill="#C084FC">Udaykiran7799-M</tspan>
+    </text>
+  </g>
+</svg>

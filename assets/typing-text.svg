@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 60" width="100%" height="60">
+  <defs>
+    <linearGradient id="typeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+
+    <style>
+      .cursor {
+        animation: blinkCursor 0.8s infinite;
+      }
+      @keyframes blinkCursor {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      
+      .text-item {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Fira Code', monospace;
+        font-size: 20px;
+        font-weight: 600;
+        fill: url(#typeGrad);
+      }
+    </style>
+  </defs>
+
+  <!-- Shell Prompt Icon -->
+  <g transform="translate(15, 38)">
+    <circle cx="0" cy="-6" r="14" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1"/>
+    <text x="0" y="-1" fill="#38BDF8" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">&gt;_</text>
+  </g>
+
+  <!-- Dynamic Typing Text Rotation using SVG switch / keyframe opacity -->
+  <g transform="translate(42, 38)">
+    <!-- String 1 -->
+    <text class="text-item">
+      <animate attributeName="opacity" values="0;1;1;0;0;0;0;0" dur="14s" repeatCount="indefinite" keyTimes="0;0.05;0.22;0.25;0.5;0.75;0.9;1"/>
+      Full-Stack Developer (Java &amp; Spring Boot)
+    </text>
+
+    <!-- String 2 -->
+    <text class="text-item">
+      <animate attributeName="opacity" values="0;0;0;1;1;0;0;0" dur="14s" repeatCount="indefinite" keyTimes="0;0.25;0.28;0.33;0.47;0.50;0.75;1"/>
+      BCA Data Analytics @ Kristu Jayanti College
+    </text>
+
+    <!-- String 3 -->
+    <text class="text-item">
+      <animate attributeName="opacity" values="0;0;0;0;0;1;1;0" dur="14s" repeatCount="indefinite" keyTimes="0;0.50;0.53;0.58;0.72;0.75;0.9;1"/>
+      Data Analyst Intern @ BeeSkilled
+    </text>
+
+    <!-- String 4 -->
+    <text class="text-item">
+      <animate attributeName="opacity" values="0;0;0;0;0;0;0;1" dur="14s" repeatCount="indefinite" keyTimes="0;0.25;0.5;0.75;0.78;0.83;0.95;1"/>
+      Building Scalable Systems &amp; Visualizing Insights
+    </text>
+  </g>
+
+  <!-- Blinking Terminal Caret on the right -->
+  <rect x="580" y="20" width="3" height="22" fill="#38BDF8" class="cursor"/>
+</svg>

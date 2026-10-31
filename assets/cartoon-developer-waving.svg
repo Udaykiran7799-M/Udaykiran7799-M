@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" width="100%" height="380">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="waveBg" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#14182E"/>
+      <stop offset="60%" stop-color="#0A0E1A"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </radialGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="softGlowW" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="cardShadowW" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Character Gradients -->
+    <linearGradient id="skinGrad4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FCD5B5"/>
+      <stop offset="100%" stop-color="#EAA882"/>
+    </linearGradient>
+
+    <linearGradient id="hairGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D283E"/>
+      <stop offset="50%" stop-color="#1B1728"/>
+      <stop offset="100%" stop-color="#100D1A"/>
+    </linearGradient>
+
+    <linearGradient id="hoodieGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#312E81"/>
+      <stop offset="50%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <style>
+      .waving-hand { 
+        animation: waveHand 1.8s ease-in-out infinite; 
+        transform-origin: 395px 145px; 
+      }
+      .bubble-float { 
+        animation: floatBubble 3.5s ease-in-out infinite; 
+      }
+      .twinkle-w { 
+        animation: starTwinkleW 2.6s ease-in-out infinite; 
+      }
+
+      @keyframes waveHand {
+        0%, 100% { transform: rotate(0deg); }
+        25% { transform: rotate(-18deg); }
+        50% { transform: rotate(14deg); }
+        75% { transform: rotate(-12deg); }
+      }
+      @keyframes floatBubble {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes starTwinkleW {
+        0%, 100% { opacity: 0.2; transform: scale(0.8); }
+        50% { opacity: 0.9; transform: scale(1.3); }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="640" height="380" rx="20" fill="url(#waveBg)"/>
+
+  <!-- Ambient Light Wells -->
+  <circle cx="320" cy="180" r="160" fill="rgba(99, 102, 241, 0.08)" filter="url(#softGlowW)"/>
+  <circle cx="160" cy="140" r="110" fill="rgba(56, 189, 248, 0.06)" filter="url(#softGlowW)"/>
+  <circle cx="480" cy="130" r="110" fill="rgba(192, 132, 252, 0.06)" filter="url(#softGlowW)"/>
+
+  <!-- Twinkling Starlight -->
+  <g fill="#38BDF8">
+    <circle cx="80" cy="80" r="1.5" class="twinkle-w" style="animation-delay: 0.2s;"/>
+    <circle cx="140" cy="50" r="2" class="twinkle-w" style="animation-delay: 1.4s;"/>
+    <circle cx="530" cy="60" r="2" class="twinkle-w" style="animation-delay: 0.8s;"/>
+    <circle cx="580" cy="120" r="1.5" class="twinkle-w" style="animation-delay: 2.1s;"/>
+    <circle cx="100" cy="220" r="1.5" class="twinkle-w" style="animation-delay: 1.7s;"/>
+    <polygon points="120,120 122,125 127,126 122,128 120,133 118,128 113,126 118,125" fill="#C084FC" opacity="0.6" class="twinkle-w" style="animation-delay: 1.0s;"/>
+    <polygon points="500,200 502,204 507,205 502,207 500,211 498,207 493,205 498,204" fill="#38BDF8" opacity="0.6" class="twinkle-w" style="animation-delay: 2.3s;"/>
+  </g>
+
+  <!-- ==================== FLOATING SPEECH BUBBLE ==================== -->
+  <g transform="translate(100, 45)" class="bubble-float" filter="url(#cardShadowW)">
+    <!-- Speech Bubble Body -->
+    <rect width="250" height="74" rx="16" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.5"/>
+    
+    <!-- Bubble Pointer towards character -->
+    <polygon points="210,73 228,88 222,73" fill="#0F172A"/>
+    <line x1="210" y1="73" x2="228" y2="88" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.5"/>
+
+    <!-- Content inside bubble -->
+    <text x="20" y="28" fill="#F1F5F9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">
+      Thanks for visiting my portfolio! ✨
+    </text>
+    <text x="20" y="48" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="500">
+      Let's connect &amp; build the future together.
+    </text>
+    <circle cx="230" cy="22" r="3" fill="#34D399"/>
+  </g>
+
+  <!-- ==================== WAVING DEVELOPER CHARACTER ==================== -->
+  <g transform="translate(320, 160)">
+    <!-- Torso & Hoodie -->
+    <path d="M -55 70 C -55 25 -35 0 0 0 C 35 0 55 25 55 70 L 50 160 L -50 160 Z" fill="url(#hoodieGrad4)"/>
+    
+    <!-- Hoodie V-neck -->
+    <path d="M -16 6 L 0 28 L 16 6 Z" fill="#1E1B4B"/>
+    <polygon points="-8,6 0,18 8,6" fill="#38BDF8" opacity="0.8"/>
+
+    <!-- Drawstrings -->
+    <line x1="-6" y1="20" x2="-6" y2="40" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="6" y1="20" x2="6" y2="38" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- Neck -->
+    <rect x="-10" y="-18" width="20" height="24" rx="5" fill="#EAA882"/>
+
+    <!-- Left Arm Resting casually -->
+    <path d="M -35 40 Q -60 70 -45 110" fill="none" stroke="#1E1B4B" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="-43" cy="112" r="7" fill="#EAA882"/>
+
+    <!-- Right Upper Arm -->
+    <path d="M 35 40 Q 60 20 75 -15" fill="none" stroke="#1E1B4B" stroke-width="14" stroke-linecap="round"/>
+
+    <!-- Head -->
+    <g transform="translate(0, -45)">
+      <!-- Ears -->
+      <circle cx="-28" cy="5" r="8" fill="#EAA882"/>
+      <circle cx="28" cy="5" r="8" fill="#EAA882"/>
+
+      <!-- Face -->
+      <path d="M -25 -15 C -25 -32 25 -32 25 -15 C 25 12 18 30 0 30 C -18 30 -25 12 -25 -15 Z" fill="url(#skinGrad4)"/>
+
+      <!-- Modern Glasses -->
+      <rect x="-21" y="-4" width="18" height="14" rx="4" fill="rgba(56, 189, 248, 0.12)" stroke="#38BDF8" stroke-width="1.8"/>
+      <rect x="3" y="-4" width="18" height="14" rx="4" fill="rgba(56, 189, 248, 0.12)" stroke="#38BDF8" stroke-width="1.8"/>
+      <line x1="-3" y1="3" x2="3" y2="3" stroke="#38BDF8" stroke-width="1.8"/>
+
+      <!-- Friendly Eyes -->
+      <circle cx="-12" cy="3" r="3" fill="#1E1B2E"/>
+      <circle cx="-13" cy="2" r="1.2" fill="#FFFFFF"/>
+      <circle cx="12" cy="3" r="3" fill="#1E1B2E"/>
+      <circle cx="11" cy="2" r="1.2" fill="#FFFFFF"/>
+
+      <!-- Eyebrows -->
+      <path d="M -20 -9 Q -12 -13 -5 -9" fill="none" stroke="#2D283E" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M 5 -9 Q 12 -13 20 -9" fill="none" stroke="#2D283E" stroke-width="2.2" stroke-linecap="round"/>
+
+      <!-- Nose -->
+      <path d="M 0 6 Q 1 10 4 9" fill="none" stroke="#D98E68" stroke-width="1.8" stroke-linecap="round"/>
+
+      <!-- Warm Genuine Smile -->
+      <path d="M -7 16 Q 0 24 7 16" fill="none" stroke="#B85C42" stroke-width="2.4" stroke-linecap="round"/>
+
+      <!-- Cheeks Blush -->
+      <ellipse cx="-16" cy="13" rx="3.5" ry="2" fill="#F87171" opacity="0.45"/>
+      <ellipse cx="16" cy="13" rx="3.5" ry="2" fill="#F87171" opacity="0.45"/>
+
+      <!-- Stylish Hair -->
+      <path d="M -26 -14 C -26 -35 -12 -44 10 -42 C 22 -40 30 -28 28 -16 C 26 -20 18 -24 10 -23 C 0 -22 -10 -20 -16 -14 Z" fill="url(#hairGrad4)"/>
+      <path d="M -24 -20 C -20 -35 5 -42 20 -36 C 14 -32 2 -29 -6 -20 Z" fill="#3D3558" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- Animated Waving Hand & Forearm (Positioned over character's right shoulder) -->
+  <g class="waving-hand">
+    <!-- Forearm -->
+    <path d="M 395 145 L 405 105" fill="none" stroke="#1E1B4B" stroke-width="13" stroke-linecap="round"/>
+    <!-- Palm -->
+    <circle cx="406" cy="98" r="8" fill="#EAA882"/>
+    <!-- Fingers Waving Open -->
+    <line x1="400" y1="94" x2="394" y2="82" stroke="#EAA882" stroke-width="3.2" stroke-linecap="round"/>
+    <line x1="404" y1="92" x2="401" y2="78" stroke="#EAA882" stroke-width="3.2" stroke-linecap="round"/>
+    <line x1="408" y1="92" x2="409" y2="78" stroke="#EAA882" stroke-width="3.2" stroke-linecap="round"/>
+    <line x1="412" y1="94" x2="416" y2="82" stroke="#EAA882" stroke-width="3.2" stroke-linecap="round"/>
+    <!-- Thumb -->
+    <line x1="398" y1="98" x2="390" y2="94" stroke="#EAA882" stroke-width="3.2" stroke-linecap="round"/>
+    
+    <!-- Motion Breeze Lines around hand -->
+    <path d="M 380 75 Q 388 70 384 65" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <path d="M 425 72 Q 432 78 435 85" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- Bottom Capsule Bar -->
+  <g transform="translate(320, 350)" text-anchor="middle">
+    <rect x="-160" y="-12" width="320" height="24" rx="12" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1"/>
+    <text x="0" y="4" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500">
+      👋 <tspan fill="#38BDF8">Always Curious</tspan> • <tspan fill="#C084FC">Always Coding</tspan> • <tspan fill="#34D399">Let's Connect!</tspan>
+    </text>
+  </g>
+</svg>
